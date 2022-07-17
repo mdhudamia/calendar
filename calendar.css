@@ -1,0 +1,115 @@
+/* ====================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(45deg, orange, tomato);
+}
+
+.calender_section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.year h1 {
+    font-size: 180px;
+    color: #fff;
+    letter-spacing: 30px;
+    text-shadow: -10px 6px 15px #000;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.title {
+    background-color: #000;
+    padding: 0 71px;
+    z-index: 1;
+}
+
+
+.title h1 {
+    padding: 5px 16px;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: 7px;
+    text-shadow: -5px -1px 0px #b27402;
+}
+
+.day_section {
+    display: grid;
+    grid-template-columns: repeat(7, 45px);
+    grid-template-rows: repeat(1, 45px);
+    row-gap: 10px;
+    column-gap: 18px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.day_section::after {
+    position: absolute;
+    content: "";
+    background: #000;
+    height: 100%;
+    width: 100%;
+    opacity: .2;
+    box-shadow: 3px 5px 5px #fff;
+}
+
+.day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.date_section {
+    display: grid;
+    grid-template-columns: repeat(7, 45px);
+    grid-template-rows: repeat(5, 45px);
+    row-gap: 10px;
+    column-gap: 18px;
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #000;
+}
+
+.date::after {
+    position: absolute;
+    content: "";
+    background: #ddd;
+    height: 100%;
+    width: 100%;
+    opacity: .2;
+}
+
+.date_section>.next_month {
+    position: relative;
+}
+
+.date_section>.next_month::after {
+    position: absolute;
+    content: "";
+    background: #efefef;
+    height: 100%;
+    width: 100%;
+    opacity: .1;
+}
